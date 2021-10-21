@@ -1,3 +1,5 @@
+//Esse modelo já contém as respostas dos itens C e D
+
 public class DataHora {
     
     int hora, minuto, dia, mes, ano;
