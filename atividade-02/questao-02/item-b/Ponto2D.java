@@ -37,8 +37,8 @@ public class Ponto2D {
         ehRetangulo(ponto1.coordX, ponto1.coordY, ponto2.coordX, ponto2.coordY, ponto3.coordX, ponto3.coordY, ponto4.coordX, ponto4.coordY);
     }
 
-    public static void main(String[] args) {
-        
+    public static void mostraRetangulo(){
         Retangulo();
     }
+
 }

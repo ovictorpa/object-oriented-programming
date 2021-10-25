@@ -40,11 +40,15 @@ public class poligono {
         }
     }
 
-    public void ladosDoPoligono(){
+    public static void ladosDoPoligono(){
 
         poligono poligono = new poligono();
         poligono.lados = 5;
 
         nomeDoPoligono(poligono.lados);
+    }
+
+    public static void mostraPoligono(){
+        ladosDoPoligono();
     }
 }

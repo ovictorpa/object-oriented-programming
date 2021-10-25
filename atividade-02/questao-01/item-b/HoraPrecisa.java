@@ -2,7 +2,7 @@ public class HoraPrecisa {
     
     int hora, minutos, segundos, centSeg;
 
-    public static void mostraHoraAproximada(){
+    public static void mostraHoraPrecisa(){
 
         HoraPrecisa hora = new HoraPrecisa();
         hora.hora = 14;

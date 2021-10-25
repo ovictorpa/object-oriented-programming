@@ -34,9 +34,4 @@ public class LivroDeBiblioteca {
         System.out.println("Data da Devolução: " + livro.dataDaDevolucao);
 
     }
-
-    public static void main(String[] args) {
-        
-        EmprestarLivro();
-    }
 }

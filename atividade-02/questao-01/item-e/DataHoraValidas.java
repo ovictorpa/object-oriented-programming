@@ -49,7 +49,7 @@ public class DataHoraValidas {
         else System.out.println(datahora.hora + ":" + datahora.minuto);
     }
 
-    public static void mostraDataEHora(){
+    public static void mostraDataEHoraValidas(){
 
         DataHoraValidas datahora = new DataHoraValidas();
         datahora.mostraData();

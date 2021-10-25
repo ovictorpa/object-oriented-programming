@@ -3,13 +3,13 @@ public class Ponto2D {
     int coordX;
     int coordY;
 
-    public double tamanhoDaLinha(int x1, int y1, int x2, int y2){
+    public static double tamanhoDaLinha(int x1, int y1, int x2, int y2){
 
 
         return Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
     }
 
-    public void Linha(){
+    public static void Linha(){
 
         Ponto2D ponto1 = new Ponto2D();
         ponto1.coordX = 5;
@@ -22,6 +22,10 @@ public class Ponto2D {
         System.out.println("(" + ponto1.coordX +", " + ponto1.coordY +")");
         System.out.println("(" + ponto2.coordX +", " + ponto2.coordY + ")");
         System.out.printf("Tamanho aproximado da linha: %.2f ", tamanhoDaLinha(ponto1.coordX, ponto1.coordY, ponto2.coordX, ponto2.coordY));
+    }
+
+    public static void mostraLinha(){
+        Linha();
     }
 
 }

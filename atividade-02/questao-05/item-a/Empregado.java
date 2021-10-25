@@ -23,9 +23,4 @@ public class Empregado{
         System.out.println("Departamento do funcionário: " + empregado.departamento);
         System.out.printf("Salário desse Mês: R$ $.2f", calculaSalarioMensal(empregado.horasTrabalhadasNoMes, empregado.salarioPorHora));
     }
-
-    public static void main(String[] args) {
-        
-        mostraDados();
-    }
 }

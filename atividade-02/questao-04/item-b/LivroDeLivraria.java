@@ -40,9 +40,4 @@ public class LivroDeLivraria{
         System.out.printf("Valor do livro com desconto: %.2f", DescontoAVista(livro.desconto, livro.valor));
     }
 
-    public static void main(String[] args) {
-        
-        venderLivro();
-    }
-
 }

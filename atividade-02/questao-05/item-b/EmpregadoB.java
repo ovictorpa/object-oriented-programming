@@ -13,7 +13,7 @@ public class EmpregadoB {
 
     }
 
-    public static void mostraDados(){
+    public static void mostraDados2(){
 
         EmpregadoB empregado = new EmpregadoB();
         empregado.nome = "Victor Anthony Pereira Alves";
@@ -26,10 +26,5 @@ public class EmpregadoB {
         System.out.println("Nome do funcionário: " + empregado.nome);
         System.out.println("Departamento do funcionário: " + empregado.departamento);
         System.out.printf("Salário desse Mês: R$ $.2f", calculaSalarioMensal(empregado.horasTrabalhadasNoMes, empregado.salarioPorHora));
-    }
-
-    public static void main(String[] args) {
-        
-        mostraDados();
     }
 }
