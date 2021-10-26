@@ -1,8 +1,6 @@
 public class NumeroComplexo {
 
-    private double i;
-    private double pReal;
-    private double pImaginaria;
+    private double pReal, pImaginaria;
    
     public void inicializaNumero(int a, int b){
         pReal = a;
@@ -11,7 +9,8 @@ public class NumeroComplexo {
 
     public void imprimeNumero(){
 
-        System.out.printf("%.2f\n", pReal+(pImaginaria*i));
+        System.out.printf("%.2f + %.2fi\n", pReal, pImaginaria);
+        System.out.println();
     }
     
     public boolean ehIgual(NumeroComplexo n, int p1, int p2){
@@ -21,26 +20,35 @@ public class NumeroComplexo {
         else return false;
     }
 
-    public double soma(NumeroComplexo n, int p1, int p2){
+    public void soma(NumeroComplexo n, int p1, int p2){
+
         n.inicializaNumero(p1, p2);
-        return (pReal + (pImaginaria*i)) + (n.pReal + (n.pImaginaria*i));
+        pReal = (pReal + n.pReal);
+        pImaginaria = (pImaginaria + n.pImaginaria);
+        imprimeNumero();
     }
 
-    public double subtrai(NumeroComplexo n, int p1, int p2){
+    public void subtrai(NumeroComplexo n, int p1, int p2){
 
         n.inicializaNumero(p1, p2);
-        return (pReal + (pImaginaria*i)) - (n.pReal + (n.pImaginaria*i));
+        pReal = (pReal - n.pReal);
+        pImaginaria = (pImaginaria - n.pImaginaria);
+        imprimeNumero();
     }
 
-    public double multiplica(NumeroComplexo n, int p1, int p2){
+    public void multiplica(NumeroComplexo n, int p1, int p2){
 
         n.inicializaNumero(p1, p2);
-        return (pReal + (pImaginaria*i)) * (n.pReal + (n.pImaginaria*i));
+        pReal = (pReal * n.pReal) - (pImaginaria * n.pImaginaria);
+        pImaginaria = (pReal * n.pImaginaria) + (pImaginaria * n.pReal);
+        imprimeNumero();
     }
 
-    public double divide(NumeroComplexo n, int p1, int p2){
+    public void divide(NumeroComplexo n, int p1, int p2){
 
         n.inicializaNumero(p1, p2);
-        return (pReal + (pImaginaria*i))/(n.pReal + (n.pImaginaria*i));
+        pReal = ((pReal * n.pReal) - (pImaginaria * n.pImaginaria))/((n.pReal*n.pReal) + (n.pImaginaria*n.pImaginaria));
+        pImaginaria = (pReal * n.pImaginaria) + (pImaginaria * n.pReal)/((n.pReal*n.pReal) + (n.pImaginaria*n.pImaginaria));
+        imprimeNumero();
     }   
 }
