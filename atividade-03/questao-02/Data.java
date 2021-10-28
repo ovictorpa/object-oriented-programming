@@ -1,4 +1,4 @@
-public class Data {
+public class Data implements Cloneable {
     
     private int dia, mes, ano;
 
@@ -85,4 +85,10 @@ public class Data {
         if(ano%400 == 0 || ((ano % 4 == 0) && (ano % 100 != 0))) return true;
         return false;
     }
+
+    public Object clone() throws CloneNotSupportedException{
+
+        return (Data)super.clone();
+    }
+    
 }

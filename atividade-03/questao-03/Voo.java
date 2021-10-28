@@ -1,4 +1,4 @@
-public class Voo {
+public class Voo implements Cloneable {
     
     private int numeroVoo;
     private int numeroCadeira;
@@ -58,5 +58,8 @@ public class Voo {
         return dataVoo;
     }
 
+    public Object clone() throws CloneNotSupportedException{
 
+        return (Voo)super.clone();
+    }
 }
