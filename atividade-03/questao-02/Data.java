@@ -87,7 +87,6 @@ public class Data implements Cloneable {
     }
 
     public Object clone() throws CloneNotSupportedException{
-
         return (Data)super.clone();
     }
     

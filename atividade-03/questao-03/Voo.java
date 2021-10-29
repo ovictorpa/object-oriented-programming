@@ -3,7 +3,7 @@ public class Voo implements Cloneable {
     private int numeroVoo;
     private int numeroCadeira;
     private int cadeirasOcupadas = 0;
-    private int cadeirasLivres= 100;
+    private boolean cadeiras[] = new boolean[100]; 
     private Data dataVoo = new Data();
 
     public void construtorVoo(int numero, int dia, int mes, int ano){
@@ -15,7 +15,7 @@ public class Voo implements Cloneable {
     public void imprimeNumeroeData(){
 
         System.out.println("Numero do Voo: " + numeroVoo);
-        System.out.println("Data do Voo: " + dataVoo.getDia() + "/" + dataVoo.getMes() + "/" + dataVoo.getAno());
+        System.out.println("Data do Voo: " + dataVoo.getDia() + "/" + dataVoo.getMes() + "/" + dataVoo.getAno() +'\n');
 
     }
 
@@ -27,27 +27,24 @@ public class Voo implements Cloneable {
 
     }
 
-    public int verifica(int cadeiraLivre){
+    public boolean verifica(int cadeiraLivre){
 
-        proximoLivre(cadeiraLivre);
-        if(cadeiraLivre == numeroCadeira) return 0;
-        else return 1;
+        return !this.cadeiras[cadeiraLivre];
     }
 
     
     public boolean ocupa(int cadeiraLivre){
 
-        int flag = verifica(cadeiraLivre);
-    
-        if(flag == 1) return true;
-        else {
-           cadeirasOcupadas++;
-           return false;
-       }
+        if(this.cadeiras[cadeiraLivre - 1] == false){
+            this.cadeiras[cadeiraLivre - 1] = true;
+            cadeirasOcupadas++;
+            return true;
+        }
+        else return false;
     } 
         
     public int vagas(){
-        return cadeirasLivres - cadeirasOcupadas;
+        return this.cadeiras.length - cadeirasOcupadas;
     }
     
     public int getVoo(){
